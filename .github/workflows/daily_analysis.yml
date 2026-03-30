@@ -41,7 +41,7 @@ jobs:
       - name: Check HKEX trading day
         run: |
           TODAY=$(date +%Y-%m-%d)
-          if grep -q "$TODAY" .github/workflows/holidays.txt; then
+          if grep -q "$TODAY" holidays.txt; then
             echo "Holiday ($TODAY), skip job."
             exit 0
           fi
